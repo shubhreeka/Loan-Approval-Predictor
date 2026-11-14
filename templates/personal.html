@@ -1,0 +1,38 @@
+<html>
+<head>
+  <title>Personal Details</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+<div class="container">
+  <h2>Personal Details</h2>
+  <form action="/loan" method="post" enctype="multipart/form-data">
+
+    <label for="name">Full Name</label>
+    <input type="text" name="name" required>
+
+    <label for="age">Age</label>
+    <input type="number" name="age" required>
+
+    <label for="aadhaar">Upload Aadhaar Card</label>
+    <input type="file" name="aadhaar" required>
+
+    <label for="pan">Upload PAN Card</label>
+    <input type="file" name="pan" required>
+
+    <label for="itr">Upload ITR</label>
+    <input type="file" name="itr" required>
+
+    <label for="form16">Upload Form 16</label>
+    <input type="file" name="form16" required>
+
+    <label>
+      <input type="checkbox" name="declaration" required>
+      I declare that the information and documents submitted are true and correct. Falsification may lead to rejection of the loan.
+    </label>
+
+    <button type="submit">Continue</button>
+  </form>
+</div>
+</body>
+</html>

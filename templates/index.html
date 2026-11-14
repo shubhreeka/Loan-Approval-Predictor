@@ -1,0 +1,85 @@
+<html>
+<head>
+  <title>Loan Application</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+<div class="container">
+  <h2>Loan Details Form</h2>
+  <form action="/result" method="post">
+    <label>Annual Income (₹)</label>
+    <input type="number" name="Annual_Income" placeholder= "e.g - 1200000 (₹)" required>
+
+    <label>Loan Amount Requested (₹)</label>
+    <input type="number" name="Loan_Amount" placeholder= "e.g - 1500000 (₹)" required>
+
+    <label>CIBIL Score</label>
+    <input type="number" name="CIBIL_Score" min="300" max="900" placeholder= "Between 300 - 900" required>
+
+    <label>Owns Car?</label>
+    <select name="Owns_Car">
+      <option value="True">Yes</option>
+      <option value="False">No</option>
+    </select>
+
+    <label>Owns House?</label>
+    <select name="Owns_House">
+      <option value="True">Yes</option>
+      <option value="False">No</option>
+    </select>
+
+    <label>Married?</label>
+    <select name="Married">
+      <option value="True">Yes</option>
+      <option value="False">No</option>
+    </select>
+
+    <label>Gender</label>
+    <select name="Gender">
+      <option>Male</option>
+      <option>Female</option>
+      <option>Other</option>
+    </select>
+
+    <label>Education Level</label>
+    <select name="Education_Level">
+      <option>Primary</option>
+      <option>Secondary</option>
+      <option>Graduate</option>
+      <option>Postgraduate</option>
+    </select>
+
+    <label>Employment Type</label>
+    <select name="Employment_Type">
+      <option>Salaried</option>
+      <option>Self-Employed</option>
+      <option>Unemployed</option>
+    </select>
+
+    <label>Income Proof Type</label>
+    <select name="Income_Proof">
+      <option>ITR</option>
+      <option>Salary Slip</option>
+      <option>Form 16</option>
+    </select>
+
+    <label>Number of Assets</label>
+    <input type="number" name="Number_of_Assets" min="0" max="5" placeholder="No. of Properties, Plots, Vehicles etc" required>
+
+    <label>Gold Worth (₹)</label>
+    <input type="number" name="Gold_Worth" placeholder = "Worth of Total Gold Owned (e.g - 200000 (₹))" required>
+
+    <label>Other Loans?</label>
+    <select name="Other_Loans">
+      <option value="True">Yes</option>
+      <option value="False">No</option>
+    </select>
+
+    <label>Number of Dependents</label>
+    <input type="number" name="Dependents" min="0" max="8" placeholder = "Number of People Dependant on the Applicant (e.g - 2 (children, spouse, parents etc))" required>
+
+    <button type="submit">Submit Loan Application</button>
+  </form>
+</div>
+</body>
+</html>
