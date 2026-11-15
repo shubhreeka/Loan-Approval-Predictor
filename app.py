@@ -1,3 +1,5 @@
+import os
+os.chdir(os.path.dirname(os.path.abspath(__file__)))  # relative paths below work from any terminal folder
 from flask import Flask, render_template, request
 import os
 import pickle
